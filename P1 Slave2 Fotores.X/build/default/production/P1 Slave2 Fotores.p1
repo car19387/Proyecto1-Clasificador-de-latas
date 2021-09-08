@@ -1,0 +1,721 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"55 P1 Slave2 Fotores.c
+[; ;P1 Slave2 Fotores.c: 55: void setup(void);
+[v _setup `(v ~T0 @X0 0 ef ]
+"1251 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
+[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S45 . ADON GO_nDONE CHS ADCS ]
+"1257
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
+"1267
+[s S47 :1 `uc 1 :1 `uc 1 ]
+[n S47 . . nDONE ]
+"1271
+[s S48 :1 `uc 1 :1 `uc 1 ]
+[n S48 . . GO_DONE ]
+"1250
+[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
+[n S44 . . . . . ]
+"1276
+[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"543 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"856
+[s S30 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S30 . SSPM CKP SSPEN SSPOV WCOL ]
+"863
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"855
+[u S29 `S30 1 `S31 1 ]
+[n S29 . . . ]
+"870
+[v _SSPCONbits `VS29 ~T0 @X0 0 e@20 ]
+"843
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"2183
+[s S82 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S82 . BF UA R_nW S P D_nA CKE SMP ]
+"2193
+[s S83 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S83 . . R . D ]
+"2199
+[s S84 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S84 . . I2C_READ I2C_START I2C_STOP I2C_DATA ]
+"2206
+[s S85 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S85 . . nW . nA ]
+"2212
+[s S86 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S86 . . nWRITE . nADDRESS ]
+"2218
+[s S87 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S87 . . R_W . D_A ]
+"2224
+[s S88 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S88 . . READ_WRITE . DATA_ADDRESS ]
+"2182
+[u S81 `S82 1 `S83 1 `S84 1 `S85 1 `S86 1 `S87 1 `S88 1 ]
+[n S81 . . . . . . . . ]
+"2231
+[v _SSPSTATbits `VS81 ~T0 @X0 0 e@148 ]
+"3641
+[v _BF `Vb ~T0 @X0 0 e@1184 ]
+"1238
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"927
+[v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
+"228
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1154
+[v _CCPR2L `Vuc ~T0 @X0 0 e@27 ]
+"3387
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3449
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1416
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1478
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1540
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"1602
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"1664
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
+"166
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"290
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"352
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"414
+[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
+"1868
+[s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S70 . SCS LTS HTS OSTS IRCF ]
+"1875
+[s S71 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S71 . . IRCF0 IRCF1 IRCF2 ]
+"1867
+[u S69 `S70 1 `S71 1 ]
+[n S69 . . . ]
+"1882
+[v _OSCCONbits `VS69 ~T0 @X0 0 e@143 ]
+"2983
+[s S116 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S116 . . VCFG0 VCFG1 . ADFM ]
+"2982
+[u S115 `S116 1 ]
+[n S115 . . ]
+"2991
+[v _ADCON1bits `VS115 ~T0 @X0 0 e@159 ]
+"947
+[s S33 :4 `uc 1 :2 `uc 1 :2 `uc 1 ]
+[n S33 . CCP1M DC1B P1M ]
+"952
+[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S34 . CCP1M0 CCP1M1 CCP1M2 CCP1M3 DC1B0 DC1B1 P1M0 P1M1 ]
+"962
+[s S35 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S35 . . CCP1Y CCP1X ]
+"946
+[u S32 `S33 1 `S34 1 `S35 1 ]
+[n S32 . . . . ]
+"968
+[v _CCP1CONbits `VS32 ~T0 @X0 0 e@23 ]
+"1174
+[s S42 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S42 . CCP2M DC2B0 DC2B1 ]
+"1179
+[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S43 . CCP2M0 CCP2M1 CCP2M2 CCP2M3 CCP2Y CCP2X ]
+"1173
+[u S41 `S42 1 `S43 1 ]
+[n S41 . . . ]
+"1188
+[v _CCP2CONbits `VS41 ~T0 @X0 0 e@29 ]
+"778
+[s S27 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S27 . T2CKPS TMR2ON TOUTPS ]
+"783
+[s S28 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S28 . T2CKPS0 T2CKPS1 . TOUTPS0 TOUTPS1 TOUTPS2 TOUTPS3 ]
+"777
+[u S26 `S27 1 `S28 1 ]
+[n S26 . . . ]
+"793
+[v _T2CONbits `VS26 ~T0 @X0 0 e@18 ]
+"2041
+[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
+"465
+[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"475
+[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S17 . . TMR0IF . TMR0IE ]
+"464
+[u S15 `S16 1 `S17 1 ]
+[n S15 . . . ]
+"482
+[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
+"1708
+[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
+"1707
+[u S62 `S63 1 ]
+[n S62 . . ]
+"1718
+[v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
+"64 ./I2C.h
+[; ;./I2C.h: 64: void I2C_Slave_Init(uint8_t address);
+[v _I2C_Slave_Init `(v ~T0 @X0 0 ef1`uc ]
+"54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"230
+[; <" PORTB equ 06h ;# ">
+"292
+[; <" PORTC equ 07h ;# ">
+"354
+[; <" PORTD equ 08h ;# ">
+"416
+[; <" PORTE equ 09h ;# ">
+"454
+[; <" PCLATH equ 0Ah ;# ">
+"461
+[; <" INTCON equ 0Bh ;# ">
+"539
+[; <" PIR1 equ 0Ch ;# ">
+"595
+[; <" PIR2 equ 0Dh ;# ">
+"652
+[; <" TMR1 equ 0Eh ;# ">
+"659
+[; <" TMR1L equ 0Eh ;# ">
+"666
+[; <" TMR1H equ 0Fh ;# ">
+"673
+[; <" T1CON equ 010h ;# ">
+"767
+[; <" TMR2 equ 011h ;# ">
+"774
+[; <" T2CON equ 012h ;# ">
+"845
+[; <" SSPBUF equ 013h ;# ">
+"852
+[; <" SSPCON equ 014h ;# ">
+"922
+[; <" CCPR1 equ 015h ;# ">
+"929
+[; <" CCPR1L equ 015h ;# ">
+"936
+[; <" CCPR1H equ 016h ;# ">
+"943
+[; <" CCP1CON equ 017h ;# ">
+"1040
+[; <" RCSTA equ 018h ;# ">
+"1135
+[; <" TXREG equ 019h ;# ">
+"1142
+[; <" RCREG equ 01Ah ;# ">
+"1149
+[; <" CCPR2 equ 01Bh ;# ">
+"1156
+[; <" CCPR2L equ 01Bh ;# ">
+"1163
+[; <" CCPR2H equ 01Ch ;# ">
+"1170
+[; <" CCP2CON equ 01Dh ;# ">
+"1240
+[; <" ADRESH equ 01Eh ;# ">
+"1247
+[; <" ADCON0 equ 01Fh ;# ">
+"1348
+[; <" OPTION_REG equ 081h ;# ">
+"1418
+[; <" TRISA equ 085h ;# ">
+"1480
+[; <" TRISB equ 086h ;# ">
+"1542
+[; <" TRISC equ 087h ;# ">
+"1604
+[; <" TRISD equ 088h ;# ">
+"1666
+[; <" TRISE equ 089h ;# ">
+"1704
+[; <" PIE1 equ 08Ch ;# ">
+"1760
+[; <" PIE2 equ 08Dh ;# ">
+"1817
+[; <" PCON equ 08Eh ;# ">
+"1864
+[; <" OSCCON equ 08Fh ;# ">
+"1929
+[; <" OSCTUNE equ 090h ;# ">
+"1981
+[; <" SSPCON2 equ 091h ;# ">
+"2043
+[; <" PR2 equ 092h ;# ">
+"2050
+[; <" SSPADD equ 093h ;# ">
+"2057
+[; <" SSPMSK equ 093h ;# ">
+"2062
+[; <" MSK equ 093h ;# ">
+"2179
+[; <" SSPSTAT equ 094h ;# ">
+"2348
+[; <" WPUB equ 095h ;# ">
+"2418
+[; <" IOCB equ 096h ;# ">
+"2488
+[; <" VRCON equ 097h ;# ">
+"2558
+[; <" TXSTA equ 098h ;# ">
+"2644
+[; <" SPBRG equ 099h ;# ">
+"2706
+[; <" SPBRGH equ 09Ah ;# ">
+"2776
+[; <" PWM1CON equ 09Bh ;# ">
+"2846
+[; <" ECCPAS equ 09Ch ;# ">
+"2928
+[; <" PSTRCON equ 09Dh ;# ">
+"2972
+[; <" ADRESL equ 09Eh ;# ">
+"2979
+[; <" ADCON1 equ 09Fh ;# ">
+"3013
+[; <" WDTCON equ 0105h ;# ">
+"3066
+[; <" CM1CON0 equ 0107h ;# ">
+"3131
+[; <" CM2CON0 equ 0108h ;# ">
+"3196
+[; <" CM2CON1 equ 0109h ;# ">
+"3247
+[; <" EEDATA equ 010Ch ;# ">
+"3252
+[; <" EEDAT equ 010Ch ;# ">
+"3259
+[; <" EEADR equ 010Dh ;# ">
+"3266
+[; <" EEDATH equ 010Eh ;# ">
+"3273
+[; <" EEADRH equ 010Fh ;# ">
+"3280
+[; <" SRCON equ 0185h ;# ">
+"3337
+[; <" BAUDCTL equ 0187h ;# ">
+"3389
+[; <" ANSEL equ 0188h ;# ">
+"3451
+[; <" ANSELH equ 0189h ;# ">
+"3501
+[; <" EECON1 equ 018Ch ;# ">
+"3546
+[; <" EECON2 equ 018Dh ;# ">
+"26 P1 Slave2 Fotores.c
+[p x FOSC  =  INTRC_NOCLKOUT ]
+"27
+[p x WDTE  =  OFF        ]
+"28
+[p x PWRTE  =  ON        ]
+"29
+[p x MCLRE  =  OFF       ]
+"30
+[p x CP  =  OFF          ]
+"31
+[p x CPD  =  OFF         ]
+"32
+[p x BOREN  =  OFF       ]
+"33
+[p x IESO  =  OFF        ]
+"34
+[p x FCMEN  =  OFF       ]
+"35
+[p x LVP  =  OFF          ]
+"38
+[p x BOR4V  =  BOR40V    ]
+"39
+[p x WRT  =  OFF         ]
+"49
+[; ;P1 Slave2 Fotores.c: 49: uint8_t Foto;
+[v _Foto `uc ~T0 @X0 1 e ]
+"50
+[; ;P1 Slave2 Fotores.c: 50: uint8_t z;
+[v _z `uc ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"60
+[; ;P1 Slave2 Fotores.c: 60: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"61
+[; ;P1 Slave2 Fotores.c: 61:     setup();
+[e ( _setup ..  ]
+"62
+[; ;P1 Slave2 Fotores.c: 62:     ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"67
+[; ;P1 Slave2 Fotores.c: 67:     while(1){
+[e :U 140 ]
+{
+"68
+[; ;P1 Slave2 Fotores.c: 68:         if(ADCON0bits.GO == 0){
+[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 142  ]
+{
+"69
+[; ;P1 Slave2 Fotores.c: 69:             if (ADCON0bits.CHS == 0){
+[e $ ! == -> . . _ADCON0bits 0 2 `i -> 0 `i 143  ]
+{
+"70
+[; ;P1 Slave2 Fotores.c: 70:                 ADCON0bits.CHS = 1;
+[e = . . _ADCON0bits 0 2 -> -> 1 `i `uc ]
+"71
+[; ;P1 Slave2 Fotores.c: 71:             }
+}
+[e $U 144  ]
+"72
+[; ;P1 Slave2 Fotores.c: 72:             else {
+[e :U 143 ]
+{
+"73
+[; ;P1 Slave2 Fotores.c: 73:                 ADCON0bits.CHS = 0;
+[e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
+"74
+[; ;P1 Slave2 Fotores.c: 74:             }
+}
+[e :U 144 ]
+"75
+[; ;P1 Slave2 Fotores.c: 75:             _delay((unsigned long)((50)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"76
+[; ;P1 Slave2 Fotores.c: 76:             ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"77
+[; ;P1 Slave2 Fotores.c: 77:         }
+}
+[e :U 142 ]
+"78
+[; ;P1 Slave2 Fotores.c: 78:     }
+}
+[e :U 139 ]
+[e $U 140  ]
+[e :U 141 ]
+"79
+[; ;P1 Slave2 Fotores.c: 79:     return;
+[e $UE 138  ]
+"80
+[; ;P1 Slave2 Fotores.c: 80: }
+[e :UE 138 ]
+}
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"85
+[; ;P1 Slave2 Fotores.c: 85: void __attribute__((picinterrupt((""))))isr(void){
+[v _isr `(v ~T1 @X0 1 ef ]
+{
+[e :U _isr ]
+[f ]
+"86
+[; ;P1 Slave2 Fotores.c: 86:     if(PIR1bits.SSPIF == 1){
+[e $ ! == -> . . _PIR1bits 0 3 `i -> 1 `i 146  ]
+{
+"87
+[; ;P1 Slave2 Fotores.c: 87:         SSPCONbits.CKP = 0;
+[e = . . _SSPCONbits 0 1 -> -> 0 `i `uc ]
+"89
+[; ;P1 Slave2 Fotores.c: 89:         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+[e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 147  ]
+{
+"90
+[; ;P1 Slave2 Fotores.c: 90:             z = SSPBUF;
+[e = _z _SSPBUF ]
+"91
+[; ;P1 Slave2 Fotores.c: 91:             SSPCONbits.SSPOV = 0;
+[e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
+"92
+[; ;P1 Slave2 Fotores.c: 92:             SSPCONbits.WCOL = 0;
+[e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
+"93
+[; ;P1 Slave2 Fotores.c: 93:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"94
+[; ;P1 Slave2 Fotores.c: 94:         }
+}
+[e :U 147 ]
+"96
+[; ;P1 Slave2 Fotores.c: 96:         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+[e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i ! != -> . . _SSPSTATbits 0 2 `i -> 0 `i 148  ]
+{
+"97
+[; ;P1 Slave2 Fotores.c: 97:             z = SSPBUF;
+[e = _z _SSPBUF ]
+"98
+[; ;P1 Slave2 Fotores.c: 98:             PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"99
+[; ;P1 Slave2 Fotores.c: 99:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"100
+[; ;P1 Slave2 Fotores.c: 100:             while(!SSPSTATbits.BF);
+[e $U 149  ]
+[e :U 150 ]
+[e :U 149 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 150  ]
+[e :U 151 ]
+"101
+[; ;P1 Slave2 Fotores.c: 101:             _delay((unsigned long)((250)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"102
+[; ;P1 Slave2 Fotores.c: 102:         }
+}
+[e $U 152  ]
+"104
+[; ;P1 Slave2 Fotores.c: 104:         else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+[e :U 148 ]
+[e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i != -> . . _SSPSTATbits 0 2 `i -> 0 `i 153  ]
+{
+"105
+[; ;P1 Slave2 Fotores.c: 105:             z = SSPBUF;
+[e = _z _SSPBUF ]
+"106
+[; ;P1 Slave2 Fotores.c: 106:             BF = 0;
+[e = _BF -> -> 0 `i `b ]
+"107
+[; ;P1 Slave2 Fotores.c: 107:             SSPBUF = Foto;
+[e = _SSPBUF _Foto ]
+"108
+[; ;P1 Slave2 Fotores.c: 108:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"109
+[; ;P1 Slave2 Fotores.c: 109:             _delay((unsigned long)((250)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"110
+[; ;P1 Slave2 Fotores.c: 110:             while(SSPSTATbits.BF);
+[e $U 154  ]
+[e :U 155 ]
+[e :U 154 ]
+[e $ != -> . . _SSPSTATbits 0 0 `i -> 0 `i 155  ]
+[e :U 156 ]
+"111
+[; ;P1 Slave2 Fotores.c: 111:         }
+}
+[e :U 153 ]
+[e :U 152 ]
+"112
+[; ;P1 Slave2 Fotores.c: 112:         PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"113
+[; ;P1 Slave2 Fotores.c: 113:     }
+}
+[e :U 146 ]
+"115
+[; ;P1 Slave2 Fotores.c: 115:     if (PIR1bits.ADIF) {
+[e $ ! != -> . . _PIR1bits 0 6 `i -> 0 `i 157  ]
+{
+"116
+[; ;P1 Slave2 Fotores.c: 116:         if(ADCON0bits.CHS == 0) {
+[e $ ! == -> . . _ADCON0bits 0 2 `i -> 0 `i 158  ]
+{
+"117
+[; ;P1 Slave2 Fotores.c: 117:             Foto = ADRESH;
+[e = _Foto _ADRESH ]
+"118
+[; ;P1 Slave2 Fotores.c: 118:             Foto = (Foto);
+[e = _Foto _Foto ]
+"119
+[; ;P1 Slave2 Fotores.c: 119:             CCPR1L = Foto;
+[e = _CCPR1L _Foto ]
+"120
+[; ;P1 Slave2 Fotores.c: 120:         }
+}
+[e $U 159  ]
+"121
+[; ;P1 Slave2 Fotores.c: 121:         else {
+[e :U 158 ]
+{
+"122
+[; ;P1 Slave2 Fotores.c: 122:             PORTB = ADRESH;
+[e = _PORTB _ADRESH ]
+"123
+[; ;P1 Slave2 Fotores.c: 123:             CCPR2L = (PORTB);
+[e = _CCPR2L _PORTB ]
+"124
+[; ;P1 Slave2 Fotores.c: 124:         }
+}
+[e :U 159 ]
+"125
+[; ;P1 Slave2 Fotores.c: 125:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"126
+[; ;P1 Slave2 Fotores.c: 126:     }
+}
+[e :U 157 ]
+"127
+[; ;P1 Slave2 Fotores.c: 127: }
+[e :UE 145 ]
+}
+"132
+[; ;P1 Slave2 Fotores.c: 132: void setup() {
+[v _setup `(v ~T0 @X0 1 ef ]
+{
+[e :U _setup ]
+[f ]
+"134
+[; ;P1 Slave2 Fotores.c: 134:     ANSEL = 0x03;
+[e = _ANSEL -> -> 3 `i `uc ]
+"135
+[; ;P1 Slave2 Fotores.c: 135:     ANSELH = 0x00;
+[e = _ANSELH -> -> 0 `i `uc ]
+"137
+[; ;P1 Slave2 Fotores.c: 137:     TRISA = 0x03;
+[e = _TRISA -> -> 3 `i `uc ]
+"138
+[; ;P1 Slave2 Fotores.c: 138:     TRISB = 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"139
+[; ;P1 Slave2 Fotores.c: 139:     TRISC = 0x08;
+[e = _TRISC -> -> 8 `i `uc ]
+"140
+[; ;P1 Slave2 Fotores.c: 140:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+"141
+[; ;P1 Slave2 Fotores.c: 141:     TRISE = 0x00;
+[e = _TRISE -> -> 0 `i `uc ]
+"143
+[; ;P1 Slave2 Fotores.c: 143:     PORTA = 0x00;
+[e = _PORTA -> -> 0 `i `uc ]
+"144
+[; ;P1 Slave2 Fotores.c: 144:     PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
+"145
+[; ;P1 Slave2 Fotores.c: 145:     PORTC = 0x00;
+[e = _PORTC -> -> 0 `i `uc ]
+"146
+[; ;P1 Slave2 Fotores.c: 146:     PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+"147
+[; ;P1 Slave2 Fotores.c: 147:     PORTE = 0x00;
+[e = _PORTE -> -> 0 `i `uc ]
+"150
+[; ;P1 Slave2 Fotores.c: 150:     OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
+"151
+[; ;P1 Slave2 Fotores.c: 151:     OSCCONbits.SCS = 1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
+"154
+[; ;P1 Slave2 Fotores.c: 154:     ADCON1bits.ADFM = 0;
+[e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
+"155
+[; ;P1 Slave2 Fotores.c: 155:     ADCON1bits.VCFG0 = 0;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+"156
+[; ;P1 Slave2 Fotores.c: 156:     ADCON1bits.VCFG1 = 0;
+[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
+"158
+[; ;P1 Slave2 Fotores.c: 158:     ADCON0bits.ADCS = 2;
+[e = . . _ADCON0bits 0 3 -> -> 2 `i `uc ]
+"159
+[; ;P1 Slave2 Fotores.c: 159:     ADCON0bits.CHS = 0;
+[e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
+"160
+[; ;P1 Slave2 Fotores.c: 160:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"161
+[; ;P1 Slave2 Fotores.c: 161:     _delay((unsigned long)((50)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"164
+[; ;P1 Slave2 Fotores.c: 164:     CCP1CONbits.P1M = 0;
+[e = . . _CCP1CONbits 0 2 -> -> 0 `i `uc ]
+"165
+[; ;P1 Slave2 Fotores.c: 165:     CCP1CONbits.CCP1M = 0b1100;
+[e = . . _CCP1CONbits 0 0 -> -> 12 `i `uc ]
+"166
+[; ;P1 Slave2 Fotores.c: 166:     CCP2CONbits.CCP2M = 0b1100;
+[e = . . _CCP2CONbits 0 0 -> -> 12 `i `uc ]
+"168
+[; ;P1 Slave2 Fotores.c: 168:     CCPR1L = 0x0F;
+[e = _CCPR1L -> -> 15 `i `uc ]
+"169
+[; ;P1 Slave2 Fotores.c: 169:     CCPR2L = 0x0F;
+[e = _CCPR2L -> -> 15 `i `uc ]
+"170
+[; ;P1 Slave2 Fotores.c: 170:     CCP1CONbits.DC1B = 0;
+[e = . . _CCP1CONbits 0 1 -> -> 0 `i `uc ]
+"171
+[; ;P1 Slave2 Fotores.c: 171:     CCP2CONbits.DC2B1 = 0;
+[e = . . _CCP2CONbits 0 2 -> -> 0 `i `uc ]
+"172
+[; ;P1 Slave2 Fotores.c: 172:     CCP2CONbits.DC2B0 = 0;
+[e = . . _CCP2CONbits 0 1 -> -> 0 `i `uc ]
+"174
+[; ;P1 Slave2 Fotores.c: 174:     T2CONbits.T2CKPS1 = 1;
+[e = . . _T2CONbits 1 1 -> -> 1 `i `uc ]
+"175
+[; ;P1 Slave2 Fotores.c: 175:     T2CONbits.T2CKPS0 = 1;
+[e = . . _T2CONbits 1 0 -> -> 1 `i `uc ]
+"176
+[; ;P1 Slave2 Fotores.c: 176:     T2CONbits.TMR2ON = 1;
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"177
+[; ;P1 Slave2 Fotores.c: 177:     PR2 = 250;
+[e = _PR2 -> -> 250 `i `uc ]
+"178
+[; ;P1 Slave2 Fotores.c: 178:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"180
+[; ;P1 Slave2 Fotores.c: 180:     while (!PIR1bits.TMR2IF);
+[e $U 161  ]
+[e :U 162 ]
+[e :U 161 ]
+[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 162  ]
+[e :U 163 ]
+"181
+[; ;P1 Slave2 Fotores.c: 181:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"184
+[; ;P1 Slave2 Fotores.c: 184:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"185
+[; ;P1 Slave2 Fotores.c: 185:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"186
+[; ;P1 Slave2 Fotores.c: 186:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"187
+[; ;P1 Slave2 Fotores.c: 187:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"188
+[; ;P1 Slave2 Fotores.c: 188:     I2C_Slave_Init(0x70);
+[e ( _I2C_Slave_Init (1 -> -> 112 `i `uc ]
+"189
+[; ;P1 Slave2 Fotores.c: 189: }
+[e :UE 160 ]
+}
